@@ -1,0 +1,14 @@
+{
+  "name": "super-duper-easy-server",
+  "version": "1.0.0",
+  "description": "Start a web server from a JSON snippet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kasper Jacobsen",
+  "license": "MIT",
+  "dependencies": {
+    "restify": "^2.8.5"
+  }
+}

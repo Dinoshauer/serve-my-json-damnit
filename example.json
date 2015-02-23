@@ -1,0 +1,23 @@
+{
+    "endpoints": [
+        {
+            "method": "GET",
+            "url": "/users",
+            "response": {
+                "code": 200,
+                "data": [
+                    {
+                        "id": 0,
+                        "name": "Foo",
+                        "email": "foo@example.com"
+                    },
+                    {
+                        "id": 1,
+                        "name": "Bar",
+                        "email": "bar@example.com"
+                    }
+                ]
+            }
+        }
+    ]
+}
