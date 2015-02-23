@@ -9,6 +9,7 @@
   "author": "Kasper Jacobsen",
   "license": "MIT",
   "dependencies": {
+    "lodash": "^3.3.0",
     "restify": "^2.8.5"
   }
 }
