@@ -3,9 +3,6 @@
   "version": "1.0.1",
   "description": "Start a web server from a JSON snippet",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "bin": {
     "serve-json": "./index.js"
   },
@@ -22,5 +19,12 @@
   },
   "bugs": {
     "url": "https://github.com/Dinoshauer/serve-my-json-damnit/issues"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "request": "^2.53.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node spec/"
   }
 }

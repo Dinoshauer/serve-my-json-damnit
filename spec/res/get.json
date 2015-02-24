@@ -1,0 +1,25 @@
+{
+    "port": 8000,
+    "endpoints": [
+        {
+            "method": "GET",
+            "url": "/users",
+            "code": 200,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "response": [
+                {
+                    "id": 0,
+                    "name": "Foo",
+                    "email": "foo@example.com"
+                },
+                {
+                    "id": 1,
+                    "name": "Bar",
+                    "email": "bar@example.com"
+                }
+            ]
+        }
+    ]
+}
