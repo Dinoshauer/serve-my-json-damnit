@@ -91,4 +91,106 @@ describe('Serve my JSON, damnit!', function () {
             done();
         });
     });
+    describe('DELETE', function (done) {
+        beforeEach(function (done) {
+            var fp = path.resolve(__dirname, 'res', 'delete.json'),
+                config = JSON.parse(fs.readFileSync(fp));
+
+            http.init(config, function() {
+                done();
+            });
+        });
+
+        it('accepts a DELETE request', function (done) {
+            request.del('http://localhost:8000/users/0', function (e, res, body) {
+                var expected = {status: 'success!'},
+                    result = JSON.parse(body);
+                expect(result).toEqual(expected);
+                expect(res.statusCode).toBe(200);
+                done();
+            });
+        });
+
+        afterEach(function (done) {
+            http._server.close();
+            done();
+        });
+    });
+    describe('PATCH', function (done) {
+        beforeEach(function (done) {
+            var fp = path.resolve(__dirname, 'res', 'patch.json'),
+                config = JSON.parse(fs.readFileSync(fp));
+
+            http.init(config, function() {
+                done();
+            });
+        });
+
+        it('accepts a PATCH request', function (done) {
+            var d = {foo: 'bar'};
+            request.patch('http://localhost:8000/users/0', d, function (e, res, body) {
+                var expected = {status: 'success!'},
+                    result = JSON.parse(body);
+                expect(result).toEqual(expected);
+                expect(res.statusCode).toBe(200);
+                done();
+            });
+        });
+
+        afterEach(function (done) {
+            http._server.close();
+            done();
+        });
+    });
+    describe('HEAD', function (done) {
+        beforeEach(function (done) {
+            var fp = path.resolve(__dirname, 'res', 'head.json'),
+                config = JSON.parse(fs.readFileSync(fp));
+
+            http.init(config, function() {
+                done();
+            });
+        });
+
+        it('accepts a HEAD request', function (done) {
+            request.head('http://localhost:8000/users', function (e, res, body) {
+                expect(body).toEqual('');
+                expect(res.statusCode).toBe(200);
+                done();
+            });
+        });
+
+        afterEach(function (done) {
+            http._server.close();
+            done();
+        });
+    });
+    describe('OPTIONS', function (done) {
+        beforeEach(function (done) {
+            var fp = path.resolve(__dirname, 'res', 'options.json'),
+                config = JSON.parse(fs.readFileSync(fp));
+
+            http.init(config, function() {
+                done();
+            });
+        });
+
+        it('accepts a OPTIONS request', function (done) {
+            request({
+                method: 'OPTIONS',
+                uri: 'http://localhost:8000/users'
+            }, function (e, res, body) {
+                var expected = {status: 'success!'},
+                    result = JSON.parse(body);
+                expect(result).toEqual(expected);
+                expect(res.statusCode).toBe(200);
+                done();
+            });
+        });
+
+        afterEach(function (done) {
+            http._server.close();
+            done();
+        });
+    });
 });

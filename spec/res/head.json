@@ -1,0 +1,14 @@
+{
+    "port": 8000,
+    "endpoints": [
+        {
+            "method": "HEAD",
+            "url": "/users",
+            "code": 200,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "response": {}
+        }
+    ]
+}
