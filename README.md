@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/Dinoshauer/serve-my-json-damnit.svg?branch=master)](https://travis-ci.org/Dinoshauer/serve-my-json-damnit)
+[![Coverage Status](https://coveralls.io/repos/Dinoshauer/serve-my-json-damnit/badge.svg)](https://coveralls.io/r/Dinoshauer/serve-my-json-damnit)
+[![npm version](https://badge.fury.io/js/serve-my-json-damnit.svg)](http://badge.fury.io/js/serve-my-json-damnit)
+
 Serve my JSON, damnit!
 ======================
 
