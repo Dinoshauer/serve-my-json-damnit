@@ -1,12 +1,15 @@
 {
-  "name": "super-duper-easy-server",
+  "name": "serve-my-json-damnit",
   "version": "1.0.0",
   "description": "Start a web server from a JSON snippet",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Kasper Jacobsen",
+  "bin": {
+    "serve-json": "./index.js"
+  },
+  "author": "Kasper Jacobsen <k@mackwerk.dk>",
   "license": "MIT",
   "dependencies": {
     "lodash": "^3.3.0",

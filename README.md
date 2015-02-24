@@ -1,5 +1,5 @@
-Super duper easy server
-=======================
+Serve my JSON, damnit!
+======================
 
 **Disclaimer:** My JavaScript skills are to say the least, lacking.
 
@@ -11,7 +11,7 @@ This should do just that.
 
 *Usage:*
 
-    $ [PROGRAM_NAME_HERE] /path/to/my.json
+    $ serve-json /path/to/my.json
     listening on: 5000
 
 *JSON format:*

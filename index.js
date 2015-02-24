@@ -3,8 +3,8 @@ var fp = process.argv[2],
     _ = require('lodash'),
     restify = require('restify');
 
-var server = restify.createServer(),
-    config = JSON.parse(fs.readFileSync(fp)),
+var config = JSON.parse(fs.readFileSync(fp)),
+    server = restify.createServer(),
     port = config.port || 5000;
 
 var method_map = {
@@ -59,8 +59,6 @@ var method_map = {
     },
 }
 
-
-
 _.forEach(config.endpoints, function(endpoint) {
     var method = endpoint.method,
         url = endpoint.url,
@@ -72,5 +70,5 @@ _.forEach(config.endpoints, function(endpoint) {
 });
 
 server.listen(port, function () {
-    console.log('listening on: %s', port)
+    console.log('serving your json on: %s', port)
 });
