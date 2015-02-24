@@ -18,4 +18,4 @@ This should do just that.
 
 **JSON format:**
 
-Look in [`example.json`][example.json] for a super fast example, showing everything supported.
+Look in [`example.json`](example.json) for a super fast example, showing everything supported.
