@@ -9,11 +9,13 @@ while prototyping a client.
 
 This should do just that.
 
-*Usage:*
+**Usage:**
 
+    $ npm install -g serve-my-json-damnit
+    $ ...
     $ serve-json /path/to/my.json
     listening on: 5000
 
-*JSON format:*
+**JSON format:**
 
 Look in [`example.json`][example.json] for a super fast example, showing everything supported.
