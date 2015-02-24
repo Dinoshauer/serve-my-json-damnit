@@ -21,10 +21,11 @@
     "url": "https://github.com/Dinoshauer/serve-my-json-damnit/issues"
   },
   "devDependencies": {
+    "istanbul": "^0.3.6",
     "jasmine-node": "^1.14.5",
     "request": "^2.53.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/jasmine-node spec/"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/jasmine-node spec/"
   }
 }
