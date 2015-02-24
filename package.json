@@ -21,6 +21,7 @@
     "url": "https://github.com/Dinoshauer/serve-my-json-damnit/issues"
   },
   "devDependencies": {
+    "coveralls": "^2.11.2",
     "istanbul": "^0.3.6",
     "jasmine-node": "^1.14.5",
     "request": "^2.53.0"
